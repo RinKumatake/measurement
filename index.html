@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="measurement.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>あなたの！英文読解速度計測</title>
+</head>
+<body>
+<header>    
+    <h1><img src="images/header_logo.png" alt="あなたの！英文読解速度計測"></h1>
+</header>
+<main>
+    <h3>使用方法</h3>
+        <ol>           
+            <li>下のテキストエリアに英文を入力、"Start"ボタンを押すと計測が開始されます</li>
+            <li>"Stop"ボタンを押すと計測終了、結果が下に表示されます (WPM : word/min)</li>
+        </ol>
+     <h4><img src="images/sasaicon.gif"> 英語ニュースサイトへのリンク(参照用) <img src="images/sasaicon.gif"></h4>  
+        <ul>
+            <li><a href="https://www.voanews.com" target="blank">Voice of America</a></li>
+            <li><a href="https://www3.nhk.or.jp/nhkworld/" target="blank">NHK WORLD-JAPAN</a></li>
+        </ul>
+    <h2><img src="images/contents_panda_icon.png"> 使ってみてね <img src="images/contents_panda_icon.png"></h2>
+
+    <div class="buttonwrapper">
+    <button id="measureStart">Start</button>
+    <button id="measureStop">Stop</button>
+    </div>
+    
+    <textarea id="textarea" placeholder="英文を copy & paste で入力してください" rows="30" maxlength="2400"></textarea>   
+
+    <div id="wordCountResultarea"></div>
+    <div id="resultarea"></div> 
+    <div id="clearButton"></div>
+   
+    <script src="measurement.js"></script>
+
+</main>
+<footer>    
+        <small>&copy; 2019 Pandanoranran </small>
+</footer>
+    
+</body>
+</html>
+

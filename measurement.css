@@ -1,0 +1,168 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-image: url(images/background.gif);
+    background-repeat: repeat;
+}
+
+header, footer, main {
+    background-color: #f5f5f5;
+    width: 980px;
+    margin: 0 auto;    
+}
+
+header img {
+    vertical-align: bottom;
+}
+
+
+h2 {
+    background-color: #dcdcdc;
+    margin: 10px 5px 0px;
+    padding: 0;
+    font-size: 18pt;
+}
+
+h3 {
+    margin-left: 5px;
+    border-bottom: solid 2px #808080;
+    font-size: 16pt;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 12pt;
+}
+
+#wordCountResultarea p,
+#resultarea p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4a392e;
+}
+
+#wordCountResultarea,
+#resultarea { 
+    background: linear-gradient(#eb9f9f 80%, #f1bbba);       
+    border-radius: 5px;
+    text-align: center;
+}
+
+.buttonwrapper {
+    text-align: center;   
+}
+
+#measureStart,
+#measureStop,
+#clearButton {
+    text-align: center;
+}
+
+#measureStart {
+    margin: 10px 60px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #333;
+    font-size: 18px;
+    border: solid 1px #c0c0c0;
+    background-color: #000000;
+    color: #f5f5f5;
+}
+
+#measureStart:hover {
+    background-color: #363636;
+}
+
+#measureStart:active {
+    transform: translateY(4px);
+    box-shadow: none;    
+}    
+
+#measureStop {
+    margin: 10px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #333;
+    font-size: 18px;
+    border: solid 1px #252424;
+    background-color: #ffffff;
+    color: #252424;
+}
+
+#measureStop:hover {
+    border-color: #c0c0c0;
+    color: #c0c0c0;
+}
+
+#measureStop:active {
+    transform: translateY(4px);
+    box-shadow: none;    
+} 
+
+.clear {    
+    margin: 10px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #333;
+    font-size: 18px;
+    border: solid 1px #7ab317;
+    background-color: #7ab317;
+    color: #f5f5f5;
+}
+
+textarea {
+    border-radius: 5px;
+    resize: none;
+    width: 900px;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 1.5px;
+    line-height: 1.75;
+    margin: 0 40px;   
+}
+
+a { color: #6992a1;}
+a:hover { font-weight: bold;}
+a:visited {color: #504350;}
+
+ul { 
+    margin: 0;
+    list-style: none; 
+}
+
+
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width : 767.999px) {
+    img {
+        max-width: 100%;
+    }
+
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+
+    main h2,
+    main h3, 
+    #measureStart,
+    #measureStop,
+    #clearButton
+     {
+        text-align: center;
+    }
+    
+    textarea {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+}
