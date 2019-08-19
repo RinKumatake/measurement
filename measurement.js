@@ -7,6 +7,7 @@ const clearButton = document.getElementById("clearButton");
 const wordCountResultDivided = document.getElementById("wordCountResultarea");
 const resultDivided = document.getElementById("resultarea");
 const currentStatus = document.getElementById("status");
+const currentStatusBottom = document.getElementById("statusbottom");
 
 var startMilliSeconds = null;
 var stopMilliSeconds = null;
@@ -21,7 +22,7 @@ function start() {
         wordCountResultDivided.removeChild(wordCountResultDivided.firstChild);
         resultDivided.removeChild(resultDivided.firstChild);
         clearButton.removeChild(clearButton.firstChild);
-    } else if (currentStatus.firstChild) {//スタートボタンを連打した時に処理を終了       
+    } else if (currentStatus.firstChild) {//スタートボタン連打時に処理を終了
         return;
     }
     
@@ -31,6 +32,11 @@ function start() {
     const statusParagraph = document.createElement('p');
     statusParagraph.innerText = '計測中・・・';
     currentStatus.appendChild(statusParagraph);
+
+    const statusBottomParagraph = document.createElement('p');
+    statusBottomParagraph.innerText = '計測中・・・';
+    currentStatusBottom.appendChild(statusBottomParagraph);
+    
     
     const englishText = englishTextInput.value;
     if (englishText.length === 0) {
@@ -54,6 +60,7 @@ function stop() {
     stopMilliSeconds = stopTime.getTime();
     
     currentStatus.removeChild(currentStatus.firstChild);
+    currentStatusBottom.removeChild(currentStatusBottom.firstChild);
     
     const elapsedTime = (stopMilliSeconds - startMilliSeconds) / 1000;
     const elapsedMinutes = Math.floor(elapsedTime / 60);
