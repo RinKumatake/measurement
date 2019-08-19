@@ -18,11 +18,15 @@ stopButton.addEventListener("click", stop);
 clearButton.addEventListener("click", clear);
 
 function start() {
+    const englishText = englishTextInput.value;
+    
     if (wordCountResultDivided.firstChild && resultDivided.firstChild && clearButton.firstChild) {
         wordCountResultDivided.removeChild(wordCountResultDivided.firstChild);
         resultDivided.removeChild(resultDivided.firstChild);
         clearButton.removeChild(clearButton.firstChild);
     } else if (currentStatus.firstChild) {//スタートボタン連打時に処理を終了
+        return;
+    } else if (englishText.length === 0) {
         return;
     }
     
@@ -35,13 +39,9 @@ function start() {
 
     const statusBottomParagraph = document.createElement('p');
     statusBottomParagraph.innerText = '計測中・・・';
-    currentStatusBottom.appendChild(statusBottomParagraph);
+    currentStatusBottom.appendChild(statusBottomParagraph);   
     
-    
-    const englishText = englishTextInput.value;
-    if (englishText.length === 0) {
-        return;
-    }
+  
    
     const paragraph = document.createElement('p');
     wordCountResult = words(englishText);
